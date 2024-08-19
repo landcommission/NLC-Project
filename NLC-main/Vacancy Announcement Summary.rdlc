@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+        </Field>
+        <Field Name="Logo">
+          <DataField>Logo</DataField>
+        </Field>
+        <Field Name="AnnouncementNo_VacancyAnnouncement">
+          <DataField>AnnouncementNo_VacancyAnnouncement</DataField>
+        </Field>
+        <Field Name="PostingType_VacancyAnnouncement">
+          <DataField>PostingType_VacancyAnnouncement</DataField>
+        </Field>
+        <Field Name="RecruitmentAgencyNo_VacancyAnnouncement">
+          <DataField>RecruitmentAgencyNo_VacancyAnnouncement</DataField>
+        </Field>
+        <Field Name="AgencyName_VacancyAnnouncement">
+          <DataField>AgencyName_VacancyAnnouncement</DataField>
+        </Field>
+        <Field Name="ActualRecruiterFees_VacancyAnnouncement">
+          <DataField>ActualRecruiterFees_VacancyAnnouncement</DataField>
+        </Field>
+        <Field Name="ActualRecruiterFees_VacancyAnnouncementFormat">
+          <DataField>ActualRecruiterFees_VacancyAnnouncementFormat</DataField>
+        </Field>
+        <Field Name="CareerFairVenue_VacancyAnnouncement">
+          <DataField>CareerFairVenue_VacancyAnnouncement</DataField>
+        </Field>
+        <Field Name="CareerFairDate_VacancyAnnouncement">
+          <DataField>CareerFairDate_VacancyAnnouncement</DataField>
+        </Field>
+        <Field Name="CareerFairStartTime_VacancyAnnouncement">
+          <DataField>CareerFairStartTime_VacancyAnnouncement</DataField>
+        </Field>
+        <Field Name="CareerFairEndTime_VacancyAnnouncement">
+          <DataField>CareerFairEndTime_VacancyAnnouncement</DataField>
+        </Field>
+        <Field Name="NoofParticipants_VacancyAnnouncement">
+          <DataField>NoofParticipants_VacancyAnnouncement</DataField>
+        </Field>
+        <Field Name="DocumentDate_VacancyAnnouncement">
+          <DataField>DocumentDate_VacancyAnnouncement</DataField>
+        </Field>
+        <Field Name="HROfficerUserID_VacancyAnnouncement">
+          <DataField>HROfficerUserID_VacancyAnnouncement</DataField>
+        </Field>
+        <Field Name="HROfficerStaffNo_VacancyAnnouncement">
+          <DataField>HROfficerStaffNo_VacancyAnnouncement</DataField>
+        </Field>
+        <Field Name="StaffName_VacancyAnnouncement">
+          <DataField>StaffName_VacancyAnnouncement</DataField>
+        </Field>
+        <Field Name="Directorate_VacancyAnnouncement">
+          <DataField>Directorate_VacancyAnnouncement</DataField>
+        </Field>
+        <Field Name="Department_VacancyAnnouncement">
+          <DataField>Department_VacancyAnnouncement</DataField>
+        </Field>
+        <Field Name="Region_VacancyAnnouncement">
+          <DataField>Region_VacancyAnnouncement</DataField>
+        </Field>
+        <Field Name="FinancialYearCode_VacancyAnnouncement">
+          <DataField>FinancialYearCode_VacancyAnnouncement</DataField>
+        </Field>
+        <Field Name="DatePublished_VacancyAnnouncement">
+          <DataField>DatePublished_VacancyAnnouncement</DataField>
+        </Field>
+        <Field Name="ApplicationClosingDate_VacancyAnnouncement">
+          <DataField>ApplicationClosingDate_VacancyAnnouncement</DataField>
+        </Field>
+        <Field Name="ApplicationClosingTime_VacancyAnnouncement">
+          <DataField>ApplicationClosingTime_VacancyAnnouncement</DataField>
+        </Field>
+        <Field Name="NoofJobVacancies_VacancyAnnouncement">
+          <DataField>NoofJobVacancies_VacancyAnnouncement</DataField>
+        </Field>
+        <Field Name="AdvertisementCost_VacancyAnnouncement">
+          <DataField>AdvertisementCost_VacancyAnnouncement</DataField>
+        </Field>
+        <Field Name="AdvertisementCost_VacancyAnnouncementFormat">
+          <DataField>AdvertisementCost_VacancyAnnouncementFormat</DataField>
+        </Field>
+        <Field Name="ApprovalStatus_VacancyAnnouncement">
+          <DataField>ApprovalStatus_VacancyAnnouncement</DataField>
+        </Field>
+        <Field Name="CreatedOn_VacancyAnnouncement">
+          <DataField>CreatedOn_VacancyAnnouncement</DataField>
+        </Field>
+        <Field Name="CreatedTime_VacancyAnnouncement">
+          <DataField>CreatedTime_VacancyAnnouncement</DataField>
+        </Field>
+        <Field Name="OrganizationName_VacancyAnnouncement">
+          <DataField>OrganizationName_VacancyAnnouncement</DataField>
+        </Field>
+        <Field Name="OrganizationOverview_VacancyAnnouncement">
+          <DataField>OrganizationOverview_VacancyAnnouncement</DataField>
+        </Field>
+        <Field Name="Address_VacancyAnnouncement">
+          <DataField>Address_VacancyAnnouncement</DataField>
+        </Field>
+        <Field Name="Address2_VacancyAnnouncement">
+          <DataField>Address2_VacancyAnnouncement</DataField>
+        </Field>
+        <Field Name="City_VacancyAnnouncement">
+          <DataField>City_VacancyAnnouncement</DataField>
+        </Field>
+        <Field Name="PostCode_VacancyAnnouncement">
+          <DataField>PostCode_VacancyAnnouncement</DataField>
+        </Field>
+        <Field Name="CountryRegionCode_VacancyAnnouncement">
+          <DataField>CountryRegionCode_VacancyAnnouncement</DataField>
+        </Field>
+        <Field Name="PhoneNo_VacancyAnnouncement">
+          <DataField>PhoneNo_VacancyAnnouncement</DataField>
+        </Field>
+        <Field Name="Contact_VacancyAnnouncement">
+          <DataField>Contact_VacancyAnnouncement</DataField>
+        </Field>
+        <Field Name="Email_VacancyAnnouncement">
+          <DataField>Email_VacancyAnnouncement</DataField>
+        </Field>
+        <Field Name="HomePage_VacancyAnnouncement">
+          <DataField>HomePage_VacancyAnnouncement</DataField>
+        </Field>
+        <Field Name="NoSeries_VacancyAnnouncement">
+          <DataField>NoSeries_VacancyAnnouncement</DataField>
+        </Field>
+        <Field Name="CreatedBy_VacancyAnnouncement">
+          <DataField>CreatedBy_VacancyAnnouncement</DataField>
+        </Field>
+        <Field Name="Description_VacancyAnnouncement">
+          <DataField>Description_VacancyAnnouncement</DataField>
+        </Field>
+        <Field Name="AnnouncementNo_VacancyAnnouncementLine">
+          <DataField>AnnouncementNo_VacancyAnnouncementLine</DataField>
+        </Field>
+        <Field Name="PostingType_VacancyAnnouncementLine">
+          <DataField>PostingType_VacancyAnnouncementLine</DataField>
+        </Field>
+        <Field Name="VacancyID_VacancyAnnouncementLine">
+          <DataField>VacancyID_VacancyAnnouncementLine</DataField>
+        </Field>
+        <Field Name="SourcingMethod_VacancyAnnouncementLine">
+          <DataField>SourcingMethod_VacancyAnnouncementLine</DataField>
+        </Field>
+        <Field Name="PositionID_VacancyAnnouncementLine">
+          <DataField>PositionID_VacancyAnnouncementLine</DataField>
+        </Field>
+        <Field Name="JobTitleDesignation_VacancyAnnouncementLine">
+          <DataField>JobTitleDesignation_VacancyAnnouncementLine</DataField>
+        </Field>
+        <Field Name="DutyStationID_VacancyAnnouncementLine">
+          <DataField>DutyStationID_VacancyAnnouncementLine</DataField>
+        </Field>
+        <Field Name="WorkLocationDetails_VacancyAnnouncementLine">
+          <DataField>WorkLocationDetails_VacancyAnnouncementLine</DataField>
+        </Field>
+        <Field Name="NoofOpenings_VacancyAnnouncementLine">
+          <DataField>NoofOpenings_VacancyAnnouncementLine</DataField>
+        </Field>
+        <Field Name="RecruitmentReasonCode_VacancyAnnouncementLine">
+          <DataField>RecruitmentReasonCode_VacancyAnnouncementLine</DataField>
+        </Field>
+        <Field Name="TargetCandidateSource_VacancyAnnouncementLine">
+          <DataField>TargetCandidateSource_VacancyAnnouncementLine</DataField>
+        </Field>
+        <Field Name="JobNo_VacancyAnnouncementLine">
+          <DataField>JobNo_VacancyAnnouncementLine</DataField>
+        </Field>
+        <Field Name="TaskNo_VacancyAnnouncementLine">
+          <DataField>TaskNo_VacancyAnnouncementLine</DataField>
+        </Field>
+        <Field Name="FundingSourceID_VacancyAnnouncementLine">
+          <DataField>FundingSourceID_VacancyAnnouncementLine</DataField>
+        </Field>
+        <Field Name="DesignationGroup_VacancyAnnouncementLine">
+          <DataField>DesignationGroup_VacancyAnnouncementLine</DataField>
+        </Field>
+        <Field Name="DirectlyReportsTo_VacancyAnnouncementLine">
+          <DataField>DirectlyReportsTo_VacancyAnnouncementLine</DataField>
+        </Field>
+        <Field Name="IndirectlyReportsTo_VacancyAnnouncementLine">
+          <DataField>IndirectlyReportsTo_VacancyAnnouncementLine</DataField>
+        </Field>
+        <Field Name="JobGradeID_VacancyAnnouncementLine">
+          <DataField>JobGradeID_VacancyAnnouncementLine</DataField>
+        </Field>
+        <Field Name="OverallAppointmentAuthority_VacancyAnnouncementLine">
+          <DataField>OverallAppointmentAuthority_VacancyAnnouncementLine</DataField>
+        </Field>
+        <Field Name="SeniorityLevel_VacancyAnnouncementLine">
+          <DataField>SeniorityLevel_VacancyAnnouncementLine</DataField>
+        </Field>
+        <Field Name="TermsofServiceCode_VacancyAnnouncementLine">
+          <DataField>TermsofServiceCode_VacancyAnnouncementLine</DataField>
+        </Field>
+        <Field Name="EmploymentType_VacancyAnnouncementLine">
+          <DataField>EmploymentType_VacancyAnnouncementLine</DataField>
+        </Field>
+        <Field Name="ApplicationClosingDate_VacancyAnnouncementLine">
+          <DataField>ApplicationClosingDate_VacancyAnnouncementLine</DataField>
+        </Field>
+        <Field Name="ApplicationClosingTime_VacancyAnnouncementLine">
+          <DataField>ApplicationClosingTime_VacancyAnnouncementLine</DataField>
+        </Field>
+        <Field Name="LineBudgetCostLCY_VacancyAnnouncementLine">
+          <DataField>LineBudgetCostLCY_VacancyAnnouncementLine</DataField>
+        </Field>
+        <Field Name="LineBudgetCostLCY_VacancyAnnouncementLineFormat">
+          <DataField>LineBudgetCostLCY_VacancyAnnouncementLineFormat</DataField>
+        </Field>
+        <Field Name="ActualJobBoardCost_VacancyAnnouncementLine">
+          <DataField>ActualJobBoardCost_VacancyAnnouncementLine</DataField>
+        </Field>
+        <Field Name="ActualJobBoardCost_VacancyAnnouncementLineFormat">
+          <DataField>ActualJobBoardCost_VacancyAnnouncementLineFormat</DataField>
+        </Field>
+        <Field Name="ActualRecruiterFees_VacancyAnnouncementLine">
+          <DataField>ActualRecruiterFees_VacancyAnnouncementLine</DataField>
+        </Field>
+        <Field Name="ActualRecruiterFees_VacancyAnnouncementLineFormat">
+          <DataField>ActualRecruiterFees_VacancyAnnouncementLineFormat</DataField>
+        </Field>
+        <Field Name="AdvertisementLineCost_VacancyAnnouncementLine">
+          <DataField>AdvertisementLineCost_VacancyAnnouncementLine</DataField>
+        </Field>
+        <Field Name="AdvertisementLineCost_VacancyAnnouncementLineFormat">
+          <DataField>AdvertisementLineCost_VacancyAnnouncementLineFormat</DataField>
+        </Field>
+        <Field Name="LineNo_VacancyAnnouncementLine">
+          <DataField>LineNo_VacancyAnnouncementLine</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="CI_Picture">
+          <DataField>CI_Picture</DataField>
+        </Field>
+        <Field Name="CI_Address">
+          <DataField>CI_Address</DataField>
+        </Field>
+        <Field Name="CI__Address_2______CI__Post_Code_">
+          <DataField>CI__Address_2______CI__Post_Code_</DataField>
+        </Field>
+        <Field Name="CI_City">
+          <DataField>CI_City</DataField>
+        </Field>
+        <Field Name="CI_PhoneNo">
+          <DataField>CI_PhoneNo</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="DocumentNo_RecruitmentRequisitionHeader">
+          <DataField>DocumentNo_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="DocumentDate_RecruitmentRequisitionHeader">
+          <DataField>DocumentDate_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="RecruitmentPlanType_RecruitmentRequisitionHeader">
+          <DataField>RecruitmentPlanType_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="PositionID_RecruitmentRequisitionHeader">
+          <DataField>PositionID_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="RequesterID_RecruitmentRequisitionHeader">
+          <DataField>RequesterID_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="RequesterStaffNo_RecruitmentRequisitionHeader">
+          <DataField>RequesterStaffNo_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="RequesterName_RecruitmentRequisitionHeader">
+          <DataField>RequesterName_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="Directorate_RecruitmentRequisitionHeader">
+          <DataField>Directorate_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="Department_RecruitmentRequisitionHeader">
+          <DataField>Department_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="Region_RecruitmentRequisitionHeader">
+          <DataField>Region_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="FinacialYearCode_RecruitmentRequisitionHeader">
+          <DataField>FinacialYearCode_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="ApprovalStatus_RecruitmentRequisitionHeader">
+          <DataField>ApprovalStatus_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="CreatedBy_RecruitmentRequisitionHeader">
+          <DataField>CreatedBy_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="CreatedOn_RecruitmentRequisitionHeader">
+          <DataField>CreatedOn_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="CreatedTime_RecruitmentRequisitionHeader">
+          <DataField>CreatedTime_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="StaffEstablishment_RecruitmentRequisitionHeader">
+          <DataField>StaffEstablishment_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="CurrentHeadcount_RecruitmentRequisitionHeader">
+          <DataField>CurrentHeadcount_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="NoofOpenings_RecruitmentRequisitionHeader">
+          <DataField>NoofOpenings_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="PrimaryRecruitmentReason_RecruitmentRequisitionHeader">
+          <DataField>PrimaryRecruitmentReason_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="RecruitmentJustification_RecruitmentRequisitionHeader">
+          <DataField>RecruitmentJustification_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="TargetCandidateSource_RecruitmentRequisitionHeader">
+          <DataField>TargetCandidateSource_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="SourcingMethod_RecruitmentRequisitionHeader">
+          <DataField>SourcingMethod_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="RecruitmentCycleType_RecruitmentRequisitionHeader">
+          <DataField>RecruitmentCycleType_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="RecruitmentLeadTime_RecruitmentRequisitionHeader">
+          <DataField>RecruitmentLeadTime_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="PlannedRecruitmentStartDate_RecruitmentRequisitionHeader">
+          <DataField>PlannedRecruitmentStartDate_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="PlannedRecruitmentEndDate_RecruitmentRequisitionHeader">
+          <DataField>PlannedRecruitmentEndDate_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="PlannedEmploymentStartDate_RecruitmentRequisitionHeader">
+          <DataField>PlannedEmploymentStartDate_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="PlannedEmploymentEndDate_RecruitmentRequisitionHeader">
+          <DataField>PlannedEmploymentEndDate_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="JobNo_RecruitmentRequisitionHeader">
+          <DataField>JobNo_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="JobTaskNo_RecruitmentRequisitionHeader">
+          <DataField>JobTaskNo_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="FundingSourceID_RecruitmentRequisitionHeader">
+          <DataField>FundingSourceID_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="RecruitmentLineBudgetCost_RecruitmentRequisitionHeader">
+          <DataField>RecruitmentLineBudgetCost_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="RecruitmentLineBudgetCost_RecruitmentRequisitionHeaderFormat">
+          <DataField>RecruitmentLineBudgetCost_RecruitmentRequisitionHeaderFormat</DataField>
+        </Field>
+        <Field Name="AverageCostHire_RecruitmentRequisitionHeader">
+          <DataField>AverageCostHire_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="AverageCostHire_RecruitmentRequisitionHeaderFormat">
+          <DataField>AverageCostHire_RecruitmentRequisitionHeaderFormat</DataField>
+        </Field>
+        <Field Name="EstimateAnnualSalary_RecruitmentRequisitionHeader">
+          <DataField>EstimateAnnualSalary_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="EstimateAnnualSalary_RecruitmentRequisitionHeaderFormat">
+          <DataField>EstimateAnnualSalary_RecruitmentRequisitionHeaderFormat</DataField>
+        </Field>
+        <Field Name="HierarchicallyReportsTo_RecruitmentRequisitionHeader">
+          <DataField>HierarchicallyReportsTo_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="FunctionallyReportsTo_RecruitmentRequisitionHeader">
+          <DataField>FunctionallyReportsTo_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="JobGradeID_RecruitmentRequisitionHeader">
+          <DataField>JobGradeID_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="OverallAppointmentAuthority_RecruitmentRequisitionHeader">
+          <DataField>OverallAppointmentAuthority_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="SeniorityLevel_RecruitmentRequisitionHeader">
+          <DataField>SeniorityLevel_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="DefaultTermsofServiceCode_RecruitmentRequisitionHeader">
+          <DataField>DefaultTermsofServiceCode_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="EmploymentType_RecruitmentRequisitionHeader">
+          <DataField>EmploymentType_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="DimensionSetID_RecruitmentRequisitionHeader">
+          <DataField>DimensionSetID_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="VacancyNo_RecruitmentRequisitionHeader">
+          <DataField>VacancyNo_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="VacancyStatus_RecruitmentRequisitionHeader">
+          <DataField>VacancyStatus_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="VacancyAnnouncementID_RecruitmentRequisitionHeader">
+          <DataField>VacancyAnnouncementID_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="DatePublished_RecruitmentRequisitionHeader">
+          <DataField>DatePublished_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="ApplicationClosingDate_RecruitmentRequisitionHeader">
+          <DataField>ApplicationClosingDate_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="ApplicationClosingTime_RecruitmentRequisitionHeader">
+          <DataField>ApplicationClosingTime_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="NoofApplications_RecruitmentRequisitionHeader">
+          <DataField>NoofApplications_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="NoofFilledPosts_RecruitmentRequisitionHeader">
+          <DataField>NoofFilledPosts_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="JobTitleDesignation_RecruitmentRequisitionHeader">
+          <DataField>JobTitleDesignation_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="DutyStationID_RecruitmentRequisitionHeader">
+          <DataField>DutyStationID_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="WorkLocationDetails_RecruitmentRequisitionHeader">
+          <DataField>WorkLocationDetails_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="DocumentType_RecruitmentRequisitionHeader">
+          <DataField>DocumentType_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="Published_RecruitmentRequisitionHeader">
+          <DataField>Published_RecruitmentRequisitionHeader</DataField>
+        </Field>
+        <Field Name="DocumentNo_RecruitmentReqRequirement">
+          <DataField>DocumentNo_RecruitmentReqRequirement</DataField>
+        </Field>
+        <Field Name="DocumentType_RecruitmentReqRequirement">
+          <DataField>DocumentType_RecruitmentReqRequirement</DataField>
+        </Field>
+        <Field Name="RequirementID_RecruitmentReqRequirement">
+          <DataField>RequirementID_RecruitmentReqRequirement</DataField>
+        </Field>
+        <Field Name="QualificationCategory_RecruitmentReqRequirement">
+          <DataField>QualificationCategory_RecruitmentReqRequirement</DataField>
+        </Field>
+        <Field Name="Description_RecruitmentReqRequirement">
+          <DataField>Description_RecruitmentReqRequirement</DataField>
+        </Field>
+        <Field Name="RequirementType_RecruitmentReqRequirement">
+          <DataField>RequirementType_RecruitmentReqRequirement</DataField>
+        </Field>
+        <Field Name="SubstituteQualificationExist_RecruitmentReqRequirement">
+          <DataField>SubstituteQualificationExist_RecruitmentReqRequirement</DataField>
+        </Field>
+        <Field Name="LineNo_RecruitmentReqRequirement">
+          <DataField>LineNo_RecruitmentReqRequirement</DataField>
+        </Field>
+        <Field Name="QualificationCode_RecruitmentReqRequirement">
+          <DataField>QualificationCode_RecruitmentReqRequirement</DataField>
+        </Field>
+        <Field Name="DocumentNo_RecruitmentReqWorkCondition">
+          <DataField>DocumentNo_RecruitmentReqWorkCondition</DataField>
+        </Field>
+        <Field Name="DocumentType_RecruitmentReqWorkCondition">
+          <DataField>DocumentType_RecruitmentReqWorkCondition</DataField>
+        </Field>
+        <Field Name="LineNo_RecruitmentReqWorkCondition">
+          <DataField>LineNo_RecruitmentReqWorkCondition</DataField>
+        </Field>
+        <Field Name="WorkingConditionCategory_RecruitmentReqWorkCondition">
+          <DataField>WorkingConditionCategory_RecruitmentReqWorkCondition</DataField>
+        </Field>
+        <Field Name="Description_RecruitmentReqWorkCondition">
+          <DataField>Description_RecruitmentReqWorkCondition</DataField>
+        </Field>
+        <Field Name="DocumentNo_RecruitmentReqResponsibility">
+          <DataField>DocumentNo_RecruitmentReqResponsibility</DataField>
+        </Field>
+        <Field Name="DocumentType_RecruitmentReqResponsibility">
+          <DataField>DocumentType_RecruitmentReqResponsibility</DataField>
+        </Field>
+        <Field Name="LineNo_RecruitmentReqResponsibility">
+          <DataField>LineNo_RecruitmentReqResponsibility</DataField>
+        </Field>
+        <Field Name="Description_RecruitmentReqResponsibility">
+          <DataField>Description_RecruitmentReqResponsibility</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

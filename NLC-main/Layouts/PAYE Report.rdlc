@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1">
+          <DataField>ReportForNavId_1</DataField>
+        </Field>
+        <Field Name="EmployeeCode_PRSalaryCard">
+          <DataField>EmployeeCode_PRSalaryCard</DataField>
+        </Field>
+        <Field Name="BasicPay_PRSalaryCard">
+          <DataField>BasicPay_PRSalaryCard</DataField>
+        </Field>
+        <Field Name="BasicPay_PRSalaryCardFormat">
+          <DataField>BasicPay_PRSalaryCardFormat</DataField>
+        </Field>
+        <Field Name="PaymentMode_PRSalaryCard">
+          <DataField>PaymentMode_PRSalaryCard</DataField>
+        </Field>
+        <Field Name="Currency_PRSalaryCard">
+          <DataField>Currency_PRSalaryCard</DataField>
+        </Field>
+        <Field Name="PaysNSSF_PRSalaryCard">
+          <DataField>PaysNSSF_PRSalaryCard</DataField>
+        </Field>
+        <Field Name="PaysNHIF_PRSalaryCard">
+          <DataField>PaysNHIF_PRSalaryCard</DataField>
+        </Field>
+        <Field Name="PaysPAYE_PRSalaryCard">
+          <DataField>PaysPAYE_PRSalaryCard</DataField>
+        </Field>
+        <Field Name="PayslipMessage_PRSalaryCard">
+          <DataField>PayslipMessage_PRSalaryCard</DataField>
+        </Field>
+        <Field Name="CummBasicPay_PRSalaryCard">
+          <DataField>CummBasicPay_PRSalaryCard</DataField>
+        </Field>
+        <Field Name="CummBasicPay_PRSalaryCardFormat">
+          <DataField>CummBasicPay_PRSalaryCardFormat</DataField>
+        </Field>
+        <Field Name="CummGrossPay_PRSalaryCard">
+          <DataField>CummGrossPay_PRSalaryCard</DataField>
+        </Field>
+        <Field Name="CummGrossPay_PRSalaryCardFormat">
+          <DataField>CummGrossPay_PRSalaryCardFormat</DataField>
+        </Field>
+        <Field Name="CummNetPay_PRSalaryCard">
+          <DataField>CummNetPay_PRSalaryCard</DataField>
+        </Field>
+        <Field Name="CummNetPay_PRSalaryCardFormat">
+          <DataField>CummNetPay_PRSalaryCardFormat</DataField>
+        </Field>
+        <Field Name="CummAllowances_PRSalaryCard">
+          <DataField>CummAllowances_PRSalaryCard</DataField>
+        </Field>
+        <Field Name="CummAllowances_PRSalaryCardFormat">
+          <DataField>CummAllowances_PRSalaryCardFormat</DataField>
+        </Field>
+        <Field Name="CummDeductions_PRSalaryCard">
+          <DataField>CummDeductions_PRSalaryCard</DataField>
+        </Field>
+        <Field Name="CummDeductions_PRSalaryCardFormat">
+          <DataField>CummDeductions_PRSalaryCardFormat</DataField>
+        </Field>
+        <Field Name="SuspendPay_PRSalaryCard">
+          <DataField>SuspendPay_PRSalaryCard</DataField>
+        </Field>
+        <Field Name="SuspensionDate_PRSalaryCard">
+          <DataField>SuspensionDate_PRSalaryCard</DataField>
+        </Field>
+        <Field Name="SuspensionReasons_PRSalaryCard">
+          <DataField>SuspensionReasons_PRSalaryCard</DataField>
+        </Field>
+        <Field Name="PeriodFilter_PRSalaryCard">
+          <DataField>PeriodFilter_PRSalaryCard</DataField>
+        </Field>
+        <Field Name="Exists_PRSalaryCard">
+          <DataField>Exists_PRSalaryCard</DataField>
+        </Field>
+        <Field Name="CummPAYE_PRSalaryCard">
+          <DataField>CummPAYE_PRSalaryCard</DataField>
+        </Field>
+        <Field Name="CummPAYE_PRSalaryCardFormat">
+          <DataField>CummPAYE_PRSalaryCardFormat</DataField>
+        </Field>
+        <Field Name="CummNSSF_PRSalaryCard">
+          <DataField>CummNSSF_PRSalaryCard</DataField>
+        </Field>
+        <Field Name="CummNSSF_PRSalaryCardFormat">
+          <DataField>CummNSSF_PRSalaryCardFormat</DataField>
+        </Field>
+        <Field Name="CummPension_PRSalaryCard">
+          <DataField>CummPension_PRSalaryCard</DataField>
+        </Field>
+        <Field Name="CummPension_PRSalaryCardFormat">
+          <DataField>CummPension_PRSalaryCardFormat</DataField>
+        </Field>
+        <Field Name="CummHELB_PRSalaryCard">
+          <DataField>CummHELB_PRSalaryCard</DataField>
+        </Field>
+        <Field Name="CummHELB_PRSalaryCardFormat">
+          <DataField>CummHELB_PRSalaryCardFormat</DataField>
+        </Field>
+        <Field Name="CummNHIF_PRSalaryCard">
+          <DataField>CummNHIF_PRSalaryCard</DataField>
+        </Field>
+        <Field Name="CummNHIF_PRSalaryCardFormat">
+          <DataField>CummNHIF_PRSalaryCardFormat</DataField>
+        </Field>
+        <Field Name="BankAccountNumber_PRSalaryCard">
+          <DataField>BankAccountNumber_PRSalaryCard</DataField>
+        </Field>
+        <Field Name="BankBranch_PRSalaryCard">
+          <DataField>BankBranch_PRSalaryCard</DataField>
+        </Field>
+        <Field Name="EmployeesBank_PRSalaryCard">
+          <DataField>EmployeesBank_PRSalaryCard</DataField>
+        </Field>
+        <Field Name="PostingGroup_PRSalaryCard">
+          <DataField>PostingGroup_PRSalaryCard</DataField>
+        </Field>
+        <Field Name="NoOvertimeDaysWorked_PRSalaryCard">
+          <DataField>NoOvertimeDaysWorked_PRSalaryCard</DataField>
+        </Field>
+        <Field Name="NoOvertimeDaysWorked_PRSalaryCardFormat">
+          <DataField>NoOvertimeDaysWorked_PRSalaryCardFormat</DataField>
+        </Field>
+        <Field Name="IdentificationNumber_PRSalaryCard">
+          <DataField>IdentificationNumber_PRSalaryCard</DataField>
+        </Field>
+        <Field Name="MobileNumber_PRSalaryCard">
+          <DataField>MobileNumber_PRSalaryCard</DataField>
+        </Field>
+        <Field Name="Nationality_PRSalaryCard">
+          <DataField>Nationality_PRSalaryCard</DataField>
+        </Field>
+        <Field Name="DateofBirth_PRSalaryCard">
+          <DataField>DateofBirth_PRSalaryCard</DataField>
+        </Field>
+        <Field Name="SchemeCode2_PRSalaryCard">
+          <DataField>SchemeCode2_PRSalaryCard</DataField>
+        </Field>
+        <Field Name="JobTitle_PRSalaryCard">
+          <DataField>JobTitle_PRSalaryCard</DataField>
+        </Field>
+        <Field Name="JobDescription_PRSalaryCard">
+          <DataField>JobDescription_PRSalaryCard</DataField>
+        </Field>
+        <Field Name="Address_PRSalaryCard">
+          <DataField>Address_PRSalaryCard</DataField>
+        </Field>
+        <Field Name="EmploymentDate_PRSalaryCard">
+          <DataField>EmploymentDate_PRSalaryCard</DataField>
+        </Field>
+        <Field Name="Status_PRSalaryCard">
+          <DataField>Status_PRSalaryCard</DataField>
+        </Field>
+        <Field Name="PINNo_PRSalaryCard">
+          <DataField>PINNo_PRSalaryCard</DataField>
+        </Field>
+        <Field Name="BankAccountNo_PRSalaryCard">
+          <DataField>BankAccountNo_PRSalaryCard</DataField>
+        </Field>
+        <Field Name="ContractEndDate_PRSalaryCard">
+          <DataField>ContractEndDate_PRSalaryCard</DataField>
+        </Field>
+        <Field Name="JobGroup_PRSalaryCard">
+          <DataField>JobGroup_PRSalaryCard</DataField>
+        </Field>
+        <Field Name="CompanyEMail_PRSalaryCard">
+          <DataField>CompanyEMail_PRSalaryCard</DataField>
+        </Field>
+        <Field Name="DaysWorked_PRSalaryCard">
+          <DataField>DaysWorked_PRSalaryCard</DataField>
+        </Field>
+        <Field Name="DaysWorked_PRSalaryCardFormat">
+          <DataField>DaysWorked_PRSalaryCardFormat</DataField>
+        </Field>
+        <Field Name="GradeLevel_PRSalaryCard">
+          <DataField>GradeLevel_PRSalaryCard</DataField>
+        </Field>
+        <Field Name="Gratuity_PRSalaryCard">
+          <DataField>Gratuity_PRSalaryCard</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

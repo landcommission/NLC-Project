@@ -1,0 +1,19 @@
+#pragma warning disable AA0005, AA0008, AA0018, AA0021, AA0072, AA0137, AA0201, AA0206, AA0218, AA0228, AL0254, AL0424, AS0011, AW0006 // ForNAV settings
+tableextension 50142 tableextension50142 extends "Jobs Setup"
+{
+    fields
+    {
+        field(39004240; "Default Customer"; Code[20])
+        {
+            TableRelation = Customer;
+            Caption = 'Default Customer';
+            DataClassification = CustomerContent;
+        }
+        field(39004241; "FA WIP Nos."; Code[10])
+        {
+            Caption = 'FA WIP Nos.';
+            TableRelation = "No. Series";
+            DataClassification = CustomerContent;
+        }
+    }
+}

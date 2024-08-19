@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="CI_Picture">
+          <DataField>CI_Picture</DataField>
+        </Field>
+        <Field Name="NewSattion">
+          <DataField>NewSattion</DataField>
+        </Field>
+        <Field Name="CI_Address">
+          <DataField>CI_Address</DataField>
+        </Field>
+        <Field Name="CI__Address_2______CI__Post_Code_">
+          <DataField>CI__Address_2______CI__Post_Code_</DataField>
+        </Field>
+        <Field Name="CI_City">
+          <DataField>CI_City</DataField>
+        </Field>
+        <Field Name="CI_PhoneNo">
+          <DataField>CI_PhoneNo</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="ActualReportingDate_TRANS">
+          <DataField>ActualReportingDate_TRANS</DataField>
+        </Field>
+        <Field Name="Age_TRANS">
+          <DataField>Age_TRANS</DataField>
+        </Field>
+        <Field Name="CreatedBy_TRANS">
+          <DataField>CreatedBy_TRANS</DataField>
+        </Field>
+        <Field Name="DateCreated_TRANS">
+          <DataField>DateCreated_TRANS</DataField>
+        </Field>
+        <Field Name="Distance_TRANS">
+          <DataField>Distance_TRANS</DataField>
+        </Field>
+        <Field Name="Distance_TRANSFormat">
+          <DataField>Distance_TRANSFormat</DataField>
+        </Field>
+        <Field Name="DocumentNo_TRANS">
+          <DataField>DocumentNo_TRANS</DataField>
+        </Field>
+        <Field Name="DocumentType_TRANS">
+          <DataField>DocumentType_TRANS</DataField>
+        </Field>
+        <Field Name="Email_TRANS">
+          <DataField>Email_TRANS</DataField>
+        </Field>
+        <Field Name="EmployeeName_TRANS">
+          <DataField>EmployeeName_TRANS</DataField>
+        </Field>
+        <Field Name="EmployeeNo_TRANS">
+          <DataField>EmployeeNo_TRANS</DataField>
+        </Field>
+        <Field Name="EntryNo_TRANS">
+          <DataField>EntryNo_TRANS</DataField>
+        </Field>
+        <Field Name="JobTitle_TRANS">
+          <DataField>JobTitle_TRANS</DataField>
+        </Field>
+        <Field Name="NewSattionName_TRANS">
+          <DataField>NewSattionName_TRANS</DataField>
+        </Field>
+        <Field Name="NewStation_TRANS">
+          <DataField>NewStation_TRANS</DataField>
+        </Field>
+        <Field Name="NoSeries_TRANS">
+          <DataField>NoSeries_TRANS</DataField>
+        </Field>
+        <Field Name="OriginalStation_TRANS">
+          <DataField>OriginalStation_TRANS</DataField>
+        </Field>
+        <Field Name="OriginalStationName_TRANS">
+          <DataField>OriginalStationName_TRANS</DataField>
+        </Field>
+        <Field Name="OriginalTransferNo_TRANS">
+          <DataField>OriginalTransferNo_TRANS</DataField>
+        </Field>
+        <Field Name="PLWD_TRANS">
+          <DataField>PLWD_TRANS</DataField>
+        </Field>
+        <Field Name="Posted_TRANS">
+          <DataField>Posted_TRANS</DataField>
+        </Field>
+        <Field Name="PostedOn_TRANS">
+          <DataField>PostedOn_TRANS</DataField>
+        </Field>
+        <Field Name="ProfessionalOpinion_TRANS">
+          <DataField>ProfessionalOpinion_TRANS</DataField>
+        </Field>
+        <Field Name="ReasonsforAppeal_TRANS">
+          <DataField>ReasonsforAppeal_TRANS</DataField>
+        </Field>
+        <Field Name="Remarks_TRANS">
+          <DataField>Remarks_TRANS</DataField>
+        </Field>
+        <Field Name="ReportingDate_TRANS">
+          <DataField>ReportingDate_TRANS</DataField>
+        </Field>
+        <Field Name="RequestDate_TRANS">
+          <DataField>RequestDate_TRANS</DataField>
+        </Field>
+        <Field Name="RequestingStation_TRANS">
+          <DataField>RequestingStation_TRANS</DataField>
+        </Field>
+        <Field Name="RequestingStationName_TRANS">
+          <DataField>RequestingStationName_TRANS</DataField>
+        </Field>
+        <Field Name="Status_TRANS">
+          <DataField>Status_TRANS</DataField>
+        </Field>
+        <Field Name="SystemCreatedAt_TRANS">
+          <DataField>SystemCreatedAt_TRANS</DataField>
+        </Field>
+        <Field Name="SystemCreatedBy_TRANS">
+          <DataField>SystemCreatedBy_TRANS</DataField>
+        </Field>
+        <Field Name="SystemId_TRANS">
+          <DataField>SystemId_TRANS</DataField>
+        </Field>
+        <Field Name="SystemModifiedAt_TRANS">
+          <DataField>SystemModifiedAt_TRANS</DataField>
+        </Field>
+        <Field Name="SystemModifiedBy_TRANS">
+          <DataField>SystemModifiedBy_TRANS</DataField>
+        </Field>
+        <Field Name="TimeCreated_TRANS">
+          <DataField>TimeCreated_TRANS</DataField>
+        </Field>
+        <Field Name="ToHardshipArea_TRANS">
+          <DataField>ToHardshipArea_TRANS</DataField>
+        </Field>
+        <Field Name="TransferAppeal_TRANS">
+          <DataField>TransferAppeal_TRANS</DataField>
+        </Field>
+        <Field Name="TransferDate_TRANS">
+          <DataField>TransferDate_TRANS</DataField>
+        </Field>
+        <Field Name="TransferNo_TRANS">
+          <DataField>TransferNo_TRANS</DataField>
+        </Field>
+        <Field Name="TransferReasonCode_TRANS">
+          <DataField>TransferReasonCode_TRANS</DataField>
+        </Field>
+        <Field Name="TransferedBy_TRANS">
+          <DataField>TransferedBy_TRANS</DataField>
+        </Field>
+        <Field Name="Type_TRANS">
+          <DataField>Type_TRANS</DataField>
+        </Field>
+        <Field Name="FirstName_Emp">
+          <DataField>FirstName_Emp</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1">
+          <DataField>ReportForNavId_1</DataField>
+        </Field>
+        <Field Name="JobApplicationNo_HRJobApplications">
+          <DataField>JobApplicationNo_HRJobApplications</DataField>
+        </Field>
+        <Field Name="IDNumber_HRJobApplications">
+          <DataField>IDNumber_HRJobApplications</DataField>
+        </Field>
+        <Field Name="Gender_HRJobApplications">
+          <DataField>Gender_HRJobApplications</DataField>
+        </Field>
+        <Field Name="EMail_HRJobApplications">
+          <DataField>EMail_HRJobApplications</DataField>
+        </Field>
+        <Field Name="Disabled_HRJobApplications">
+          <DataField>Disabled_HRJobApplications</DataField>
+        </Field>
+        <Field Name="DateOfBirth_HRJobApplications">
+          <DataField>DateOfBirth_HRJobApplications</DataField>
+        </Field>
+        <Field Name="Region_HRJobApplications">
+          <DataField>Region_HRJobApplications</DataField>
+        </Field>
+        <Field Name="JobAppliedFor_HRJobApplications">
+          <DataField>JobAppliedFor_HRJobApplications</DataField>
+        </Field>
+        <Field Name="EmployeeRequisitionNo_HRJobApplications">
+          <DataField>EmployeeRequisitionNo_HRJobApplications</DataField>
+        </Field>
+        <Field Name="FullName_HRJobApplications">
+          <DataField>FullName_HRJobApplications</DataField>
+        </Field>
+        <Field Name="CountyOfBirth_HRJobApplications">
+          <DataField>CountyOfBirth_HRJobApplications</DataField>
+        </Field>
+        <Field Name="Tribe_HRJobApplications">
+          <DataField>Tribe_HRJobApplications</DataField>
+        </Field>
+        <Field Name="ReportForNavId_14">
+          <DataField>ReportForNavId_14</DataField>
+        </Field>
+        <Field Name="EmployeeNo_HRApplicantQualifications">
+          <DataField>EmployeeNo_HRApplicantQualifications</DataField>
+        </Field>
+        <Field Name="ApplicationNo_HRApplicantQualifications">
+          <DataField>ApplicationNo_HRApplicantQualifications</DataField>
+        </Field>
+        <Field Name="QualificationDescription_HRApplicantQualifications">
+          <DataField>QualificationDescription_HRApplicantQualifications</DataField>
+        </Field>
+        <Field Name="QualificationCode_HRApplicantQualifications">
+          <DataField>QualificationCode_HRApplicantQualifications</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

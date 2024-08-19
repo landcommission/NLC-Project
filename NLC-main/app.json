@@ -1,0 +1,33 @@
+{
+  "id": "e9ea1870-b41b-48f6-acd4-2026ae62ef60",
+  "name": "NLC",
+  "publisher": "GreenCom",
+  "version": "3.0.0.10",
+  "brief": "",
+  "description": "",
+  "target": "OnPrem",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "21.0.0.0",
+  "idRanges": [
+    {
+      "from": 50000,
+      "to": 599599999
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "10.0",
+  "features": [
+
+  ]
+}

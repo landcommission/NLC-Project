@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="de-DE" original="Please update this value">
+    <body>
+      <group id="body">
+        <trans-unit id="Page 833091333 - Control 1117771840 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Hit Ratio %</source>
+          <target>Hit Ratio %</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Code Coverage - Control HitRatio - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 833091333 - Action 181504597 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Start Code Coverage</source>
+          <target>Code Coverage starten</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Code Coverage - Action Start Code Coverage - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 833091333 - Action 25967797 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Stop Code Coverage</source>
+          <target>Code Coverage beenden</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Code Coverage - Action Stop Code Coverage - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 833091333 - Action 3004954119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Code</source>
+          <target>Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Code Coverage - Action Code - Property Caption</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
